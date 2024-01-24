@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import path from 'node:path';
 
 import react from '@vitejs/plugin-react';
@@ -23,6 +25,16 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@assets': path.resolve(__dirname, './src/assets'),
+    },
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/tests/setup.ts',
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped',
+      },
     },
   },
 });

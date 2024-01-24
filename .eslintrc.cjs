@@ -16,16 +16,8 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:unicorn/recommended',
   ],
-  overrides: [
-    {
-      files: ['*.test.*'],
-      plugins: ['jest'],
-      extends: ['plugin:jest/recommended'],
-      rules: { 'jest/prefer-expect-assertions': 'off' },
-    },
-  ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'jest.config.ts', 'playwright.config.ts', '__mocks__'],
-  plugins: ['react-refresh', 'import', 'jsx-a11y', 'sonarjs', 'jest', 'unicorn', 'prettier'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'playwright.config.ts', '__mocks__'],
+  plugins: ['react-refresh', 'import', 'jsx-a11y', 'sonarjs', 'unicorn', 'prettier'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'import/export': 'error',
